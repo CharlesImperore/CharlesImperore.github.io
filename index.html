@@ -25,7 +25,71 @@
 
     <link href="css/build.css" rel="stylesheet">
 
+    <!-- UNIFORM TYPOGRAPHY ONLY (no backgrounds or layout changed) -->
+    <style>
+      :root{
+        /* Base scale tuned to your Work Experience section */
+        --font-base: 16px;
+        --fz-hero: 2.2rem;   /* Hero H1 */
+        --fz-section: 1.25rem; /* Section titles (h3.resume-title) */
+        --fz-item: 1.06rem;  /* Item titles (h4 in resume items) */
+        --fz-meta: 0.97rem;  /* Location/Date/Org lines */
+        --fz-body: 0.97rem;  /* Body/bullets */
+        --lh: 1.55;
+      }
 
+      html { font-size: var(--font-base); }
+      body {
+        font-family: "Outfit", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        line-height: var(--lh);
+      }
+
+      /* Hero title */
+      .hero-section h1 {
+        font-size: var(--fz-hero);
+        font-weight: 700;
+      }
+
+      /* Section headings */
+      .resume-title {
+        font-size: var(--fz-section);
+        font-weight: 700;
+      }
+
+      /* Item titles */
+      .resume-item h4 {
+        font-size: var(--fz-item);
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+      }
+
+      /* General body/bullets inside resume items */
+      .resume-item p {
+        font-size: var(--fz-body);
+        margin: 0.2rem 0;
+      }
+
+      /* Meta rows already present in your markup (using spans or .resume-meta) */
+      .resume-item p span {           /* covers <p><span>Org</span><span>Date</span></p> */
+        font-size: var(--fz-meta) !important;
+      }
+      .resume-meta {                  /* covers <p class="resume-meta">...</p> */
+        font-size: var(--fz-meta) !important;
+      }
+      .resume-meta .left,
+      .resume-meta .right {
+        font-size: inherit !important;
+      }
+
+      /* Keep About me headings consistent with other section titles */
+      .about-section .resume-title {
+        font-size: var(--fz-section);
+        font-weight: 700;
+      }
+
+      /* Optional: ensure small buttons match the text scale */
+      button, .btn { font-size: 0.95rem; }
+    </style>
 </head>
 
 <body>
@@ -77,7 +141,6 @@
                             <a class="nav-link click-scroll" href="#section_5">Education</a>
                         </li>
         
-
                         <li class="nav-item">
                             <a class="nav-link click-scroll" href="#section_6">Volunteering</a>
                         </li>
@@ -195,23 +258,23 @@ strong adaptability and communication skills that enable me to thrive in interna
         <h3 class="resume-title">WORK EXPERIENCE</h3>
         <div class="resume-item">
           <h4>Banking Supervision Analyst, European Central Bank</h4>
-          <p><span class="left">DG-SIB, Banco Santander JST</span><span class="right">Frankfurt<br>Sep 2024 - Aug 2025</span></p>
-          <p style="clear: left;">- Designed and implemented a Securitisation Dashboard using Python for data cleaning and Tableau for data visualisation.</p>
+          <p><span>DG-SIB, Banco Santander JST</span><span>Frankfurt<br>Sep 2024 - Aug 2025</span></p>
+          <p>- Designed and implemented a Securitisation Dashboard using Python for data cleaning and Tableau for data visualisation.</p>
           <p>- Drafted 3 final decision letter for Internal Model Investigations (IMI) of the SSM and completed follow-up processes.</p>
           <p>- Quantified market risk exposures and impacts on capital requirements, contributing to supervisory measures to mitigate risks.</p>
         </div>
         <div class="resume-item">
           <h4>Corporate Finance Analyst, Mantu</h4>
-          <p><span class="left">IT Services and Consulting Group</span><span class="right">Luxembourg<br>Jan 2023- Jun 2023</span></p>
-          <p style="clear: left;">- Produced 10 Financing, Treasury and Working Capital reports for Top Management of a €600M Revenues company.</p>
+          <p><span>IT Services and Consulting Group</span><span>Luxembourg<br>Jan 2023- Jun 2023</span></p>
+          <p>- Produced 10 Financing, Treasury and Working Capital reports for Top Management of a €600M Revenues company.</p>
           <p>- Modelled transition to IFRS16 accounting standards to identify impacts on financial statements.</p>
         </div>
 
 
         <div class="resume-item">
           <h4>Portfolio Management Analyst, Stanhope Capital</h4>
-          <p><span class="left">Investment Management Company (£30Bn AuM)</span><span class="right">Paris<br>Jul 2021-Jun 2022</span></p>
-          <p style="clear: left;">- Created customised portfolios by analysing risk-return profiles and market conditions to achieve optimal allocation.</p>
+          <p><span>Investment Management Company (£30Bn AuM)</span><span>Paris<br>Jul 2021-Jun 2022</span></p>
+          <p>- Created customised portfolios by analysing risk-return profiles and market conditions to achieve optimal allocation.</p>
           <p>- Performed market research using Bloomberg and Morningstar to inform asset allocation decisions.</p>
           <p>- Conducted 12 KYC risk assessments, ensuring alignment with regulatory requirements and identifying clients' risk tolerance levels.</p>
         </div>
@@ -289,7 +352,7 @@ strong adaptability and communication skills that enable me to thrive in interna
 
           <h3 class="resume-title">VOLUNTEERING</h3>
           <div class="resume-item">
-            <h4 class="resume-meta"><span class="left">Finance Team Lead</span><span class="right">Remote</span></h4>
+            <p class="resume-meta"><span class="left">Finance Team Lead</span><span class="right">Remote</span></p>
             <p class="resume-meta"><span class="left">180 Degrees Consulting, Global Leadership Team, Non-Profit Organization</span><span class="right">March 2023 – December 2025</span></p>
             <p style="clear: left;">- Head of the finance team of the umbrella organization of an international federation of 200 social impact consulting associations bringing together 3,000 consultants in 50 countries.</p>
             <p>- Provided 12 financial analysis, reporting, and strategy recommendations to help optimize the organization's social impact goals.</p>
@@ -297,7 +360,7 @@ strong adaptability and communication skills that enable me to thrive in interna
 
 
           <div class="resume-item">
-            <h4 class="resume-meta"><span class="left">Secretary & Treasurer</span><span class="right">Paris, France</span></h4>
+            <p class="resume-meta"><span class="left">Secretary & Treasurer</span><span class="right">Paris, France</span></p>
             <p class="resume-meta"><span class="left">Musique Pour Tous, Non-Profit Organization</span><span class="right">September 2021 – June 2023</span></p>
             <p style="clear: left;">- Managed a budget of €45k, ensuring implementation of free music instrument courses for over 100 children from disadvantaged backgrounds across 5 French cities, and increased number of volunteers by +30%</p>
             <p>- Led budgeting, financial reporting, and fundraising initiatives, saving €5k worth of equipment with donation campaigns</p>
@@ -310,7 +373,7 @@ strong adaptability and communication skills that enable me to thrive in interna
     <div class="container">
           <h3 class="resume-title">PROGRAMMING PROJECTS</h3>
           <div class="resume-item">
-            <h4 class="resume-meta"><span class="left">ECB-Krisolis Data Academy Project – German Credit Default Prediction</span><span class="right">Frankfurt, Germany</span></h4>
+            <p class="resume-meta"><span class="left">ECB-Krisolis Data Academy Project – German Credit Default Prediction</span><span class="right">Frankfurt, Germany</span></p>
             <p class="resume-meta"><span class="left">Krisolis Data Academy Training Project</span><span class="right">January 2025 – June 2025</span></p>
             <p style="clear: left;">- Built and fine-tuned a Random Forest model using GridSearchCV, achieving 78% accuracy in predicting credit default risk, handling data imbalances with oversampling techniques and applying IQR for outlier management.</p>
             <p>- Conducted extensive exploratory data analysis (EDA) and feature engineering, providing insights into key drivers of credit default.</p>

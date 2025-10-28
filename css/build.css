@@ -9,8 +9,6 @@ Zein SAKKOUR
   CUSTOM PROPERTIES ( VARIABLES )             
 -----------------------------------------*/
 :root {
-  --h1-font-size: 4.5vw; /* Adjust as needed */
-  --h2-font-size: 2.5vw; 
   --white-color:                  #ffffff;
   --primary-color:                #000000;
   --DAP-color:                    #2E4588;
@@ -25,15 +23,15 @@ Zein SAKKOUR
 
   --body-font-family:             'Outfit', sans-serif;
 
-  --h1-font-size:                 74px;
-  --h2-font-size:                 46px;
-  --h3-font-size:                 28px;
-  --h4-font-size:                 24px;
-  --h5-font-size:                 20px;
-  --h6-font-size:                 18px;
-  --p-font-size:                  17px;
-  --btn-font-size:                14px;
-  --copyright-font-size:          16px;
+  --h1-font-size:                 4.5rem;
+  --h2-font-size:                 2.875rem;
+  --h3-font-size:                 1.75rem;
+  --h4-font-size:                 1.5rem;
+  --h5-font-size:                 1.25rem;
+  --h6-font-size:                 1.125rem;
+  --p-font-size:                  1.0625rem;
+  --btn-font-size:                0.875rem;
+  --copyright-font-size:          1rem;
 
   --border-radius-large:          2px;
   --border-radius-medium:         2px;
@@ -44,14 +42,12 @@ Zein SAKKOUR
   --font-weight-bold:             700;
 
 }
-.left {
-  font-size: var(--h5-font-size);
-  float: left;
+
+.resume-item p {
+  display: flex;
+  justify-content: space-between;
 }
 
-.right {
-  float: right;
-}
 
 body {
   background-image: url('../images/blue.png');
